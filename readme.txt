@@ -35,6 +35,14 @@ Only a logged in user that has generated a Key and Token can access the API.
 
 Any mobile that has a webkit based browser should work. iPhones, iPod Touch, and most newer Androids. 
 
+= Fullscreen App =
+
+Save the app to your home screen for the best experience.
+
+= Updating Data =
+
+The App saves API results to local storage so you use less mobile data and the app loads quicker. To update the data, click the refresh icon in the toolbar.
+
 == Screenshots ==
 
 1. Main app navigation
