@@ -17,9 +17,11 @@ Access Easy Digital Downloads sales data, on the go, from an iPhone or Android d
 
 == Installation ==
 
-1. Upload folder edd-mobile to the '/wp-content/plugins/' directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Visit your-site/edd-mobile from your mobile device.
+1. Make sure Easy Digital Downloads is installed and working
+2. Create user API Key from a users profile page in WP admin
+3. Upload folder edd-mobile to the '/wp-content/plugins/' directory
+4. Activate the plugin through the 'Plugins' menu in WordPress
+5. Visit your-site/edd-mobile from your mobile device.
 
 == Frequently Asked Questions ==
 
