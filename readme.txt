@@ -25,7 +25,15 @@ Access Easy Digital Downloads sales data, on the go, from an iPhone or Android d
 
 = This plugin requires Easy Digital Downloads =
 
-You will need to install Easy Digital Downloads and create an API Key and Token for each user you want to allow access to the API. Create API keys by visiting a users profile in the WordPress Admin.
+You will need to install <a href="http://easydigitaldownloads.com">Easy Digital Downloads</a> and create an API Key and Token for each user you want to allow access to the API. Create API keys by visiting a users profile in the WordPress Admin.
+
+= Who has access? =
+
+Only a logged in user that has generated a Key and Token can access the API. 
+
+= Works on what device? =
+
+Any mobile that has a webkit based browser should work. iPhones, iPod Touch, and most newer Androids. 
 
 == Screenshots ==
 
