@@ -48,13 +48,43 @@ $(function(){
 
 	$('#login-submit').click( function(e) {
 
-	  	if ( $('#usr').val() != '' || $('#pwd').val() != '' ) {
-				 setTimeout(function(){
-				 	location.reload();
-				 }, 2000);
-			} else {
-				e.preventDefault();
-			}
+		e.preventDefault();
+
+		$( '#login' ).append( '<div class="loading"><div class="spinner"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div><div class="bar9"></div><div class="bar10"></div><div class="bar11"></div><div class="bar12"></div></div></div>' );
+
+	  	if ( $('#edd_mobile_user_login').val() != '' || $('#edd_mobile_user_pass').val() != '' ) {
+
+	  		usr = $('#edd_mobile_user_login').val();
+	  		psw = $('#edd_mobile_user_pass').val();
+	  		nonce = $('#edd_mobile_login_nonce').val();
+	  		ajaxurl = $('#edd_mobile_admin_ajax').val();
+
+	  		var data = {
+		  		action: 'edd_mobile_login_action',
+		  		edd_mobile_user_login: usr,
+		  		edd_mobile_user_pass: psw,
+		  		edd_mobile_login_nonce: nonce
+		  		};
+
+		  		console.log(data);
+
+		  	$.post(ajaxurl, data, function(response) {
+
+		  	console.log(response);
+
+		  		if( response == 'failed') {
+
+		  			$('.loading').remove();
+		  		 	alert('Login Failed!');
+
+		  		} else {
+
+			  		location.reload();
+			  	}
+			});
+
+		}
+
 
 	});
 

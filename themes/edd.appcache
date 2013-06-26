@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# v1 - 2011-08-21
+
+/wp-content/plugins/edd-mobile/themes/index.php
+
+CACHE:
+/wp-content/plugins/edd-mobile/themes/css/img/arrow.png
+/wp-content/plugins/edd-mobile/themes/css/img/reload.png
+
+/wp-content/plugins/edd-mobile/themes/css/ios.css
+
+/wp-content/plugins/edd-mobile/themes/src/lib/jquery-1.7.min.js
+/wp-content/plugins/edd-mobile/themes/src/lib/jqtouch.min.js
+/wp-content/plugins/edd-mobile/themes/src/lib/iscroll.js
+/wp-content/plugins/edd-mobile/themes/src/edd-mobile.js

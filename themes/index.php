@@ -10,7 +10,7 @@
 
 		<link href="<?php echo plugins_url(); ?>/edd-mobile/themes/img/startup@2x.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 
- <link href="<?php echo plugins_url(); ?>/edd-mobile/themes/img/startup@5.png" sizes="640x1136" media="(device-height: 568px)" rel="apple-touch-startup-image">
+		<link href="<?php echo plugins_url(); ?>/edd-mobile/themes/img/startup@5.png" sizes="640x1136" media="(device-height: 568px)" rel="apple-touch-startup-image">
 
 		<link rel="stylesheet" href="<?php echo plugins_url(); ?>/edd-mobile/themes/css/ios.css" title="jQTouch">
 
@@ -44,7 +44,7 @@
 			var myScroll;
 
 			var jQT = new $.jQTouch({
-				useFastTouch: false
+				//useFastTouch: false
 			});
 
 			function loaded() {
@@ -137,14 +137,17 @@
 					 <div class="toolbar">
 						 <h1><?php _e( 'EDD Mobile', 'edd-mobile' ); ?></h1>
 					 </div>
-					 <form id="login-form" class="edit" action="<?php echo site_url( 'wp-login.php'); ?>" method="post">
+					 <form id="login-form" class="edit" action="" method="post">
 						 <ul class="rounded">
-						 	<li><input type="text" name="log" placeholder="<?php echo _x( 'Username', 'Translators: placeholder name', 'edd-mobile' ); ?>" id="usr" value="" /></li>
-						 	<li><input type="password" name="pwd" value="" placeholder="<?php echo _x( 'Password', 'Translators: placeholder name', 'edd-mobile' ); ?>" id="pwd" value="" /></li>
+						 	<li><input type="text" id="edd_mobile_user_login" name="edd_mobile_user_login" placeholder="<?php echo _x( 'Username', 'Translators: placeholder name', 'edd-mobile' ); ?>" id="usr" value="" /></li>
+						 	<li><input type="password" id="edd_mobile_user_pass" name="edd_mobile_user_pass" value="" placeholder="<?php echo _x( 'Password', 'Translators: placeholder name', 'edd-mobile' ); ?>" id="pwd" value="" /></li>
 						 </ul>
 						 <input name="rememberme" type="hidden" id="sidebar-rememberme" value="forever"/>
 						 <input type="submit" id="login-submit" name="wp-submit" class="actionButton gray submit" value="<?php _e( 'Log In', 'edd-mobile' ); ?>"/>
-						 <input type="hidden" name="testcookie" value="1" />
+
+						 <input type="hidden" id="edd_mobile_action" name="edd_mobile_action" value="login"/>
+						 <input type="hidden" id="edd_mobile_admin_ajax" name="edd_mobile_admin_ajax" value="<?php echo get_bloginfo('url'); ?>/wp-admin/admin-ajax.php"/>
+						 <input type="hidden" id="edd_mobile_login_nonce" name="edd_mobile_login_nonce" value="<?php echo wp_create_nonce( 'edd_mobile_login_nonce' ); ?>"/>
 					 </form>
 				 </div>
 

@@ -5,7 +5,7 @@ Contributors: modemlooper
 Tags: edd, easy digital downloads, mobile
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 
 A mobile app for Easy Digital Downloads
@@ -31,11 +31,11 @@ You will need to install <a href="http://easydigitaldownloads.com">Easy Digital 
 
 = Who has access? =
 
-Only a logged in user that has generated a Key and Token can access the API. 
+Only a logged in user that has generated a Key and Token can access the API.
 
 = Works on what device? =
 
-Any mobile that has a webkit based browser should work. iPhones, iPod Touch, and most newer Androids. 
+Any mobile that has a webkit based browser should work. iPhones, iPod Touch, and most newer Androids.
 
 = Fullscreen App =
 
@@ -51,6 +51,9 @@ The App saves API results to local storage so you use less mobile data and the a
 2. List of sales items
 
 == Changelog ==
+= 1.0.2 =
+Ajaxified login form to fix not logging in
+
 = 1.0.1 =
 Added translation bits and bobs props @deckerweb for patch
 

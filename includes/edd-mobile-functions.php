@@ -89,3 +89,47 @@ function eddmobile_admin_notice() {
      }
 }
 add_action( 'admin_notices', 'eddmobile_admin_notice' );
+
+
+function edd_mobile_login_user_in( $user_id, $user_login, $user_pass ) {
+	$user = get_userdata( $user_id );
+	if( ! $user )
+		return;
+	wp_set_auth_cookie( $user_id );
+	wp_set_current_user( $user_id, $user_login );
+	do_action( 'wp_login', $user_login, $user );
+}
+
+
+/**
+ *Process the login form
+ *
+ * @access      public
+ * @since       1.0
+ */
+function edd_mobile_process_login_form() {
+
+
+		if( isset( $_POST['edd_mobile_login_nonce'] ) && wp_verify_nonce( $_POST['edd_mobile_login_nonce'], 'edd_mobile_login_nonce' ) ) {
+
+			// this returns the user ID and other info from the user name
+			$user = get_user_by( 'login', $_POST['edd_mobile_user_login'] );
+			$pswd = wp_check_password( $_POST['edd_mobile_user_pass'], $user->user_pass, $user->ID );
+
+			if( $user && $pswd ) {
+
+				edd_mobile_login_user_in( $user->ID, $_POST['edd_mobile_user_login'], $_POST['edd_mobile_user_pass'] );
+
+
+			} else {
+
+				echo 'failed';
+			}
+		}
+
+
+		die();
+
+}
+add_action('wp_ajax_edd_mobile_login_action', 'edd_mobile_process_login_form');
+add_action('wp_ajax_nopriv_edd_mobile_login_action', 'edd_mobile_process_login_form');
