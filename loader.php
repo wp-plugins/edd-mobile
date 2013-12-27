@@ -5,7 +5,7 @@ Plugin URI: http://taptappress.com
 Description: A mobile app for Easy Digital Downloads
 Author: modemlooper
 Author URI: http://taptappress.com
-Version: 1.0.2
+Version: 1.0.3
 Text Domain: edd-mobile
 Domain Path: /languages/
 
