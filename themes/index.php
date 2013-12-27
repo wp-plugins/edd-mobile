@@ -16,8 +16,7 @@
 
 		<script src="<?php echo plugins_url(); ?>/edd-mobile/themes/src/lib/jquery-1.7.min.js" type="application/x-javascript" charset="utf-8"></script>
 		<script src="<?php echo plugins_url(); ?>/edd-mobile/themes/src/lib/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="<?php echo plugins_url(); ?>/edd-mobile/themes/src/lib/iscroll.js" type="text/javascript" charset="utf-8"></script>
-
+		
 		<?php if( is_user_logged_in() && edd_mobile_key() ) :?>
 			<script type="text/javascript" charset="utf-8">
 
