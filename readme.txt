@@ -4,8 +4,8 @@ Plugin URI: http://github.com/modemlooper/edd-mobile
 Contributors: modemlooper
 Tags: edd, easy digital downloads, mobile
 Requires at least: 3.5
-Tested up to: 3.5.1
-Stable tag: 1.0.2
+Tested up to: 3.8
+Stable tag: 1.0.3
 License: GPLv2 or later
 
 A mobile app for Easy Digital Downloads
@@ -51,6 +51,9 @@ The App saves API results to local storage so you use less mobile data and the a
 2. List of sales items
 
 == Changelog ==
+= 1.0.3 =
+fixed display error with icons morphing. 
+
 = 1.0.2 =
 Ajaxified login form to fix not logging in
 
