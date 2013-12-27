@@ -1176,7 +1176,8 @@ div.load-more {
 	position:absolute; z-index:1;
 	top:44px; bottom:0px; left:0;
 	width:100%;
-	overflow:auto;
+	overflow:scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 #scroller {
